@@ -25,6 +25,22 @@ public class FindMaximumTest {
 		Integer MaximumNumber = findMaximum.findMax(10, 20, 55);
 		Assert.assertSame(55, MaximumNumber);
 	}
+	@Test
+	public void givenMaximumValueAtFirstPosition_ShouldReturnFirstFloatMax() {
+		Float MaximumNumber = FindMaximum.findMax(15.1f, 2.5f, 5.0f);
+		Assert.assertEquals(15.1f, MaximumNumber, 0.001);
+	}
 
+	@Test
+	public void givenMaximumValueAtSecondPosition_ShouldReturnSecondFloatMax() {
+		Float MaximumNumber = FindMaximum.findMax(15.1f, 20.5f, 5.0f);
+		Assert.assertEquals(20.5f, MaximumNumber, 0.001);
+	}
+
+	@Test
+	public void givenMaximumValueAtThirdPosition_ShouldReturnThirdFloatMax() {
+		Float MaximumNumber = FindMaximum.findMax(15.1f, 2.5f, 25.2f);
+		Assert.assertEquals(25.2f, MaximumNumber, 0.001);
+	}
 	
 }
